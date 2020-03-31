@@ -1,1 +1,1 @@
-<script type="text/javascript" src="https://rawgithubusercontent.com/PGi-com/pgi/master/JS/formstack.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/PGi-com/pgi/master/JS/formstack.js"></script>
