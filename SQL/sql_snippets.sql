@@ -75,3 +75,65 @@ and j.emailID in (
 140332,
 140333
 )
+
+
+
+
+
+
+engagement thing
+
+select
+s.subscriberkey
+from _subscribers s
+where s.subscriberkey not in(
+select
+se.subscriberkey
+from sent_ se
+)
+and s.subscriberkey not in(
+select
+o.subscriberkey
+from open_ o
+)
+and s.subscriberkey not in(
+select
+c.subscriberkey
+from click_ c
+)
+and s.subscriberkey not in(
+select
+bo.subscriberkey
+from bounce_ bo
+)
+and s.subscriberkey not in(
+select
+u.subscriberkey
+from unsubscribe_ u
+)
+or
+s.subscriberkey in(
+select
+se.subscriberkey
+from sent_ se
+)
+and s.subscriberkey not in(
+select
+o.subscriberkey
+from open_ o
+)
+and s.subscriberkey not in(
+select
+c.subscriberkey
+from click_ c
+)
+and s.subscriberkey not in(
+select
+bo.subscriberkey
+from bounce_ bo
+)
+and s.subscriberkey not in(
+select
+u.subscriberkey
+from unsubscribe_ u
+)
